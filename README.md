@@ -14,4 +14,11 @@ new_york_city.csv
 washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Made By Peter Zhao (nuclearpz86@gmail.com)
+https://github.com/udacity/pdsnd_github
+https://pandas.pydata.org/pandas-docs/stable/getting_started/basics.html
+https://www.stackoverflow.com
+https://www.geeksforgeeks.org
+https://docs.python.org
+https://www.quora.com
+https://www.w3resource.com
