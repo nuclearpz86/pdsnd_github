@@ -6,6 +6,8 @@ import datetime
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york': 'new_york_city.csv',
               'washington': 'washington.csv' }
+months = ['january', 'february', 'march', 'april', 'may', 'june']
+days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday','sunday' ]
 
 def get_filters():
     """
@@ -72,13 +74,11 @@ def load_data(city, month, day):
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.weekday_name
     if month != 'all':
-        months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month)+1
         df = df[df['month']==month]
     if day != 'all':
         df = df[df['day_of_week']==day.title()]
     return df
-
 
 def time_stats(df):
     """
@@ -90,8 +90,6 @@ def time_stats(df):
     Returns:
         NA
     """
-    months = ['January', 'February', 'March', 'April', 'May', 'June']
-    days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday' ]
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
