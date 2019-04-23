@@ -1,5 +1,5 @@
 ### Date created
-Project created April 21st
+April 21 2019
 
 ### Project Title
 Bikeshare Analysis
@@ -12,6 +12,13 @@ bikeshare_2.py
 chicago.csv
 new_york_city.csv
 washington.csv
+
+### Executing project
+$ python bikeshare_2.py
+
+### Prerequisites
+Must have Python installed.
+Requires Numpy and Pandas modules
 
 ### Credits
 Made By Peter Zhao (nuclearpz86@gmail.com)
