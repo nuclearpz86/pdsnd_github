@@ -106,16 +106,16 @@ def time_stats(df):
     ride_count_hour = df['hour'].value_counts().values[0]
 
     if df['month'].unique().size != 1 and df['day'].unique().size != 1:
-        print('The most popular month is {} with {} rides!'.format(months[popular_month-1], ride_count_month))
-        print('The most popular day of the week is {} with {} rides!'.format(days[popular_day],ride_count_day))
+        print('The most popular month is {} with {} rides!'.format(months[popular_month-1].title(), ride_count_month))
+        print('The most popular day of the week is {} with {} rides!'.format(days[popular_day].title(),ride_count_day))
         print('The most popular time of day is {}:00 o\'clock with {} rides!'.format(popular_hour,ride_count_hour))
     elif df['month'].unique().size == 1 and df['day'].unique().size != 1:
-        print('In {}, there were total {} rides.'.format(months[popular_month-1],ride_count_month))
-        print('The most popular day of the week is {} with {} rides!'.format(days[popular_day], ride_count_day))
-        print('The most popular time of day is {}:00 o\'clock with {} rides in {}!'.format(popular_hour, ride_count_hour,months[popular_month-1]))
+        print('In {}, there were total {} rides.'.format(months[popular_month-1].title(),ride_count_month))
+        print('The most popular day of the week is {} with {} rides!'.format(days[popular_day].title(), ride_count_day))
+        print('The most popular time of day is {}:00 o\'clock with {} rides in {}!'.format(popular_hour, ride_count_hour,months[popular_month-1].title()))
     elif df['day'].unique().size == 1 and df['month'].unique().size != 1:
-        print('{} {}s were the most popular with {} rides, out of {} {} rides!'.format(months[popular_month-1],days[popular_day],ride_count_month,ride_count_day, days[popular_day]))
-        print('The most popular time of day is {}:00 o\'clock with {} rides on {}!'.format(popular_hour, ride_count_hour,days[popular_day]))
+        print('{} {}s were the most popular with {} rides, out of {} {} rides!'.format(months[popular_month-1].title(),days[popular_day].title(),ride_count_month,ride_count_day, days[popular_day].title()))
+        print('The most popular time of day is {}:00 o\'clock with {} rides on {}!'.format(popular_hour, ride_count_hour,days[popular_day].title()))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
